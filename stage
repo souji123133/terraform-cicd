@@ -1,7 +1,10 @@
-stages {
+pipeline {
+    agent any
+
+    stages {
         stage('git checkout') {
             steps {
-                sh 'git clone https://github.com/MohammadRafeeq7095/Terraform_CICD.git'
+                sh 'git clone https://github.com/souji123133/terraform-cicd.git'
             }
         }
         stage('terraform init') {
